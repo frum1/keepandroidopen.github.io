@@ -16,6 +16,7 @@ interface Props {
 }
 
 const { locale } = Astro.props;
+const byLabel = resolve({ en: 'by', ru: 'от' }, locale);
 ---
 
 <h4>{resolve(rightsGroups.heading, locale)}</h4>
@@ -93,7 +94,7 @@ const { locale } = Astro.props;
     return (
       <li>
         <a href={item.url} target="_blank">{resolve(item.text, locale)} ↗</a>
-        {hasAuthor && <> by {item.author} <a href={item.author_url} target="_blank">{item.author_text} ↗</a></>}
+        {hasAuthor && <> {byLabel} {item.author} <a href={item.author_url} target="_blank">{item.author_text} ↗</a></>}
       </li>
     );
   })}

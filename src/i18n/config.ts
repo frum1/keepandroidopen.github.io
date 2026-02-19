@@ -1,27 +1,28 @@
 export const languages = {
-  en: { label: 'English', path: '/' },
-  fr: { label: 'Français', path: '/fr/' },
-  de: { label: 'Deutsch', path: '/de/' },
-  es: { label: 'Español', path: '/es/' },
-  id: { label: 'Indonesia', path: '/id/' },
-  it: { label: 'Italiano', path: '/it/' },
-  pl: { label: 'Polski', path: '/pl/'},    
-  'pt-BR': { label: 'Português', path: '/pt-BR/' },
-  cs: { label: 'Čeština', path: '/cs/' },
-  sk: { label: 'Slovenčina', path: '/sk/' },
-  tr: { label: 'Türkçe', path: '/tr/' },
-  el: { label: 'Ελληνικά', path: '/el/'},
-  th: { label: 'ไทย', path: '/th/' },
-  uk: { label: 'Українська', path: '/uk/' },
-  ko: { label: '한국어', path: '/ko/' },
-  'zh-CN': { label: '简体中文', path: '/zh-CN/' },
-  'zh-TW': { label: '正體中文', path: '/zh-TW/' },
+  en: { label: "English", path: "/" },
+  fr: { label: "Français", path: "/fr/" },
+  de: { label: "Deutsch", path: "/de/" },
+  es: { label: "Español", path: "/es/" },
+  id: { label: "Indonesia", path: "/id/" },
+  it: { label: "Italiano", path: "/it/" },
+  pl: { label: "Polski", path: "/pl/" },
+  "pt-BR": { label: "Português", path: "/pt-BR/" },
+  cs: { label: "Čeština", path: "/cs/" },
+  sk: { label: "Slovenčina", path: "/sk/" },
+  tr: { label: "Türkçe", path: "/tr/" },
+  el: { label: "Ελληνικά", path: "/el/" },
+  th: { label: "ไทย", path: "/th/" },
+  ru: { label: "Русский", path: "/ru/" },
+  uk: { label: "Українська", path: "/uk/" },
+  ko: { label: "한국어", path: "/ko/" },
+  "zh-CN": { label: "简体中文", path: "/zh-CN/" },
+  "zh-TW": { label: "正體中文", path: "/zh-TW/" },
 } as const;
 
 export type Locale = keyof typeof languages;
-export const defaultLocale: Locale = 'en';
+export const defaultLocale: Locale = "en";
 
-import { marked } from 'marked';
+import { marked } from "marked";
 
 /** Render a markdown string to inline HTML (no wrapping <p> tags). */
 export function markdownify(text: string): string {

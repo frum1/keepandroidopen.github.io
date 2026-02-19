@@ -149,9 +149,10 @@ const languageEntries = Object.entries(languages);
         minutes > 0 || hours > 0 || days > 0 ? getLocalizedUnit(minutes, 'minute', locale, true) : '',
         getLocalizedUnit(seconds, 'second', locale, true)
       ].filter(Boolean).join(' ');
+      remaining = remaining.replace(/^\+\s*/, '');
 
       // Display the result in the element with id="countdown"
-      document.getElementById("countdown").innerHTML = remaining;
+      document.getElementById("countdown").textContent = remaining;
 
       // // If the count down is finished, write some text
       // if (distance < 0) {
